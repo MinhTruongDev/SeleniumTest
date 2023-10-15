@@ -12,7 +12,8 @@
           "NUnit": "3.13.3",
           "NUnit.Analyzers": "3.6.1",
           "NUnit3TestAdapter": "4.4.2",
-          "Selenium.WebDriver": "4.13.1",
+          "Selenium.DefaultWaitHelpers": "1.0.3",
+          "Selenium.WebDriver": "4.14.0",
           "Selenium.WebDriver.ChromeDriver": "117.0.5938.9200",
           "coverlet.collector": "3.2.0"
         },
@@ -333,7 +334,18 @@
       },
       "NUnit.Analyzers/3.6.1": {},
       "NUnit3TestAdapter/4.4.2": {},
-      "Selenium.WebDriver/4.13.1": {
+      "Selenium.DefaultWaitHelpers/1.0.3": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.14.0"
+        },
+        "runtime": {
+          "lib/net5.0/Selenium.DefaultWaitHelpers.dll": {
+            "assemblyVersion": "1.0.3.0",
+            "fileVersion": "1.0.3.0"
+          }
+        }
+      },
+      "Selenium.WebDriver/4.14.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "System.Drawing.Common": "7.0.0"
@@ -465,12 +477,19 @@
       "path": "nunit3testadapter/4.4.2",
       "hashPath": "nunit3testadapter.4.4.2.nupkg.sha512"
     },
-    "Selenium.WebDriver/4.13.1": {
+    "Selenium.DefaultWaitHelpers/1.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7asjwKWgLNjIe+NZ9GwiWWshRD9IWQzltZPiWFxF7UH62ymqjD5L0PUsWJlDm4cew1YHhcqcQpGkgi6FsGZaig==",
-      "path": "selenium.webdriver/4.13.1",
-      "hashPath": "selenium.webdriver.4.13.1.nupkg.sha512"
+      "sha512": "sha512-2D4y4VXwhWooosMuM2/KWXply7nDhrwrxRlXOXzUPqj+WaE+poy82czrLy/u1C2Mm2Nlj1Y+OFGe6LkRxKqjKg==",
+      "path": "selenium.defaultwaithelpers/1.0.3",
+      "hashPath": "selenium.defaultwaithelpers.1.0.3.nupkg.sha512"
+    },
+    "Selenium.WebDriver/4.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TQ1JCHdxuac9l4r7yehgvt+5tj6kY5RSfi3RhkEPi/uCp9g/HW1J8CBOOzAu8p5T0ERJbNrGEqYOJu13leZI9Q==",
+      "path": "selenium.webdriver/4.14.0",
+      "hashPath": "selenium.webdriver.4.14.0.nupkg.sha512"
     },
     "Selenium.WebDriver.ChromeDriver/117.0.5938.9200": {
       "type": "package",

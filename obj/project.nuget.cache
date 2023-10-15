@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rYJGWHr0APLyAtO3Of5js3u3We5FvltXuhHhm4HoUCMQ9gDfMugPaXAoD+IIuKA5Tou4B372BWg7QpdHqYxTMg==",
+  "dgSpecHash": "bg/1Hc9AAex1PvpFXQTXD+Q1WbFaOiRfjHnkRg1UOkJClCflqEnnBSgIgAYQj4tVu8qvd7wl6swTMvIK1bjX0g==",
   "success": true,
   "projectFilePath": "D:\\Projects\\C-Sharp\\AutoTest\\SeleniumTest\\SeleniumTest.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,8 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\nunit.analyzers\\3.6.1\\nunit.analyzers.3.6.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\nunit3testadapter\\4.4.2\\nunit3testadapter.4.4.2.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\selenium.webdriver\\4.13.1\\selenium.webdriver.4.13.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\selenium.defaultwaithelpers\\1.0.3\\selenium.defaultwaithelpers.1.0.3.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\selenium.webdriver\\4.14.0\\selenium.webdriver.4.14.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\selenium.webdriver.chromedriver\\117.0.5938.9200\\selenium.webdriver.chromedriver.117.0.5938.9200.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"

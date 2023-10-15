@@ -105,3 +105,4 @@ D:\Projects\C-Sharp\AutoTest\SeleniumTest\obj\Debug\net6.0\refint\SeleniumTest.d
 D:\Projects\C-Sharp\AutoTest\SeleniumTest\obj\Debug\net6.0\SeleniumTest.pdb
 D:\Projects\C-Sharp\AutoTest\SeleniumTest\obj\Debug\net6.0\SeleniumTest.genruntimeconfig.cache
 D:\Projects\C-Sharp\AutoTest\SeleniumTest\obj\Debug\net6.0\ref\SeleniumTest.dll
+D:\Projects\C-Sharp\AutoTest\SeleniumTest\bin\Debug\net6.0\Selenium.DefaultWaitHelpers.dll

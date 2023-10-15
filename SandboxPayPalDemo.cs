@@ -1,11 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OpenQA.Selenium.Support.UI;
+using Selenium.DefaultWaitHelpers;
+using System.Drawing;
 
 namespace SeleniumTest
 {
@@ -16,16 +13,18 @@ namespace SeleniumTest
 		const string SANDBOX_PAYPAL_EMAIL = "pmt1998@gmail.com";
 		const string SANDBOX_PAYPAL_PASSWORD = "Abc12345";
 		IWebDriver driver;
+		WebDriverWait wait;
 
 		[SetUp]
 		public void startBrowser()
 		{
 			var chromeOption = new ChromeOptions();
 			chromeOption.PageLoadStrategy = PageLoadStrategy.Normal;
-			chromeOption.AddArgument("no-sandbox");
+			chromeOption.AddArgument("--headless");
 			driver = new ChromeDriver(ChromeDriverService.CreateDefaultService(), chromeOption, TimeSpan.FromMinutes(3));
 			driver.Manage().Timeouts().PageLoad.Add(System.TimeSpan.FromSeconds(30));
 			driver.Manage().Window.Maximize();
+			wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
 		}
 
 		[Test]
@@ -41,14 +40,25 @@ namespace SeleniumTest
 			tbEmail.SendKeys(SANDBOX_PAYPAL_EMAIL);
 			driver.FindElement(By.Id("btnNext")).Click();
 
+
 			IWebElement tbPassword = driver.FindElement(By.Id("password"));
 			tbPassword.SendKeys(SANDBOX_PAYPAL_PASSWORD);
 
-			driver.FindElement(By.Id("btnLogin")).Click();
+			var btnLogin = driver.FindElement(By.Id("btnLogin"));
+			var currentUrl = driver.Url;
+			Thread.Sleep(1000);
+			btnLogin.Click();
+			wait.Until(driver => driver.Url != currentUrl);
 
+			TakeScreenShotAndSaveIn();
 			Assert.That(driver.Title, Is.EqualTo("PayPal: Summary"), "Complete");
+		}
 
-			driver.Quit();
+		[Test]
+		public void TestFullPageScreenShot()
+		{
+			driver.Url = "https://www.smashingmagazine.com/2017/05/long-scrolling/";
+			TakeScreenShotAndSaveIn();
 		}
 
 		[TearDown]
@@ -56,5 +66,28 @@ namespace SeleniumTest
 		{
 			driver.Quit();
 		}
+
+
+		public void TakeScreenShotAndSaveIn()
+		{
+			var path = "D:\\Test";
+			var fileName = "Abc.png";
+
+			var fullwidth = ((IJavaScriptExecutor)driver).ExecuteScript("return document.body.parentNode.scrollWidth");
+			var fullheight = ((IJavaScriptExecutor)driver).ExecuteScript("return document.body.parentNode.scrollHeight");
+
+
+			driver.Manage().Window.Size = new Size(
+				int.Parse(fullwidth.ToString()),
+				int.Parse(fullheight.ToString())
+				);
+			var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+
+			screenshot.SaveAsFile(Path.Combine(path, fileName),ScreenshotImageFormat.Png);
+			screenshot.ToString();
+
+		}
+
 	}
+
 }

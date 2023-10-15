@@ -391,17 +391,37 @@
           "build/netcoreapp3.1/NUnit3TestAdapter.props": {}
         }
       },
-      "Selenium.WebDriver/4.13.1": {
+      "Selenium.DefaultWaitHelpers/1.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "3.141.0"
+        },
+        "compile": {
+          "lib/net5.0/Selenium.DefaultWaitHelpers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Selenium.DefaultWaitHelpers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Selenium.WebDriver/4.14.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "System.Drawing.Common": "7.0.0"
         },
         "compile": {
-          "lib/netstandard2.0/WebDriver.dll": {}
+          "lib/netstandard2.0/WebDriver.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/WebDriver.dll": {}
+          "lib/netstandard2.0/WebDriver.dll": {
+            "related": ".xml"
+          }
         },
         "build": {
           "buildTransitive/Selenium.WebDriver.targets": {}
@@ -1055,10 +1075,27 @@
         "nunit_256.png"
       ]
     },
-    "Selenium.WebDriver/4.13.1": {
-      "sha512": "7asjwKWgLNjIe+NZ9GwiWWshRD9IWQzltZPiWFxF7UH62ymqjD5L0PUsWJlDm4cew1YHhcqcQpGkgi6FsGZaig==",
+    "Selenium.DefaultWaitHelpers/1.0.3": {
+      "sha512": "2D4y4VXwhWooosMuM2/KWXply7nDhrwrxRlXOXzUPqj+WaE+poy82czrLy/u1C2Mm2Nlj1Y+OFGe6LkRxKqjKg==",
       "type": "package",
-      "path": "selenium.webdriver/4.13.1",
+      "path": "selenium.defaultwaithelpers/1.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net46/Selenium.DefaultWaitHelpers.dll",
+        "lib/net46/Selenium.DefaultWaitHelpers.xml",
+        "lib/net5.0/Selenium.DefaultWaitHelpers.dll",
+        "lib/net5.0/Selenium.DefaultWaitHelpers.xml",
+        "lib/netstandard2.0/Selenium.DefaultWaitHelpers.dll",
+        "lib/netstandard2.0/Selenium.DefaultWaitHelpers.xml",
+        "selenium.defaultwaithelpers.1.0.3.nupkg.sha512",
+        "selenium.defaultwaithelpers.nuspec"
+      ]
+    },
+    "Selenium.WebDriver/4.14.0": {
+      "sha512": "TQ1JCHdxuac9l4r7yehgvt+5tj6kY5RSfi3RhkEPi/uCp9g/HW1J8CBOOzAu8p5T0ERJbNrGEqYOJu13leZI9Q==",
+      "type": "package",
+      "path": "selenium.webdriver/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1066,10 +1103,11 @@
         "buildTransitive/Selenium.WebDriver.targets",
         "images/icon.png",
         "lib/netstandard2.0/WebDriver.dll",
+        "lib/netstandard2.0/WebDriver.xml",
         "manager/linux/selenium-manager",
         "manager/macos/selenium-manager",
         "manager/windows/selenium-manager.exe",
-        "selenium.webdriver.4.13.1.nupkg.sha512",
+        "selenium.webdriver.4.14.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
       ]
     },
@@ -1161,7 +1199,8 @@
       "NUnit >= 3.13.3",
       "NUnit.Analyzers >= 3.6.1",
       "NUnit3TestAdapter >= 4.4.2",
-      "Selenium.WebDriver >= 4.13.1",
+      "Selenium.DefaultWaitHelpers >= 1.0.3",
+      "Selenium.WebDriver >= 4.14.0",
       "Selenium.WebDriver.ChromeDriver >= 117.0.5938.9200",
       "coverlet.collector >= 3.2.0"
     ]
@@ -1226,9 +1265,13 @@
             "target": "Package",
             "version": "[4.4.2, )"
           },
+          "Selenium.DefaultWaitHelpers": {
+            "target": "Package",
+            "version": "[1.0.3, )"
+          },
           "Selenium.WebDriver": {
             "target": "Package",
-            "version": "[4.13.1, )"
+            "version": "[4.14.0, )"
           },
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
